@@ -1,6 +1,6 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv #dotenv is a librery and load_dotenv is that tool that open and read .env file 
 from google import genai
-import os 
+import os # this is for python so he can access my files 
 from google.genai import types
 
 load_dotenv()
@@ -25,5 +25,5 @@ while True:
     try:
         response = chat.send_message(user_input)
         print(f"gemini: {response.text}")
-    except Exception as e:
-     print(f"error: {e}") 
+    except :
+        print("Oops! Something went wrong. Please try again later.")
